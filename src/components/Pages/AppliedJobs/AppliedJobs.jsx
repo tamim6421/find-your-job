@@ -3,6 +3,7 @@ import { useLoaderData } from "react-router-dom";
 import { getStoredJobApplication } from "../../../utility/localStorage";
 import { MdLocationPin } from "react-icons/md";
 import { BiDollarCircle } from "react-icons/bi";
+import { Helmet } from "react-helmet-async";
 
 const AppliedJobs = () => {
   const jobs = useLoaderData();
@@ -37,6 +38,10 @@ const AppliedJobs = () => {
   console.log(jobs);
   return (
     <div>
+      <Helmet>
+        <title>Dream/Applied Jobs</title>
+      </Helmet>
+      
       <h1 className="text-2xl font-semibold text-center">
         Jobs I Applied: {appliedJobs.length}
       </h1>

@@ -2,6 +2,7 @@ import { Link, useLoaderData, useParams } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { saveJobApplications } from "../../../utility/localStorage";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -23,6 +24,9 @@ const JobDetails = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>JobDetails {id}</title>
+      </Helmet>
       <div className="flex justify-center mt-20">
         <h1 className="text-3xl font-semibold"> Jobs Details</h1>
       </div>
